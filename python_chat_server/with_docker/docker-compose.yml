@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+    app:
+        build: ./dockerfiles/python
+        ports:
+            - "3008:3000"
+        volumes:
+            - .:/app
+        depends_on:
+            - mysql
+    mysql:
+        build: ./dockerfiles/mysql
+        ports:
+            - "33068:3306"
+        volumes:
+            - "mysql-data:/var/lib/mysql"
+        environment:
+            MYSQL_ROOT_PASSWORD: secret
+            MYSQL_DATABASE: chat
+volumes:
+    mysql-data:
+        driver: "local"
