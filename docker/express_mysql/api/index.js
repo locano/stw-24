@@ -1,10 +1,13 @@
 import express from 'express'
+import cors from 'cors'
 import { getAllMessages, createMessage, createDatabase } from './db.js'
 
 const app = express()
 const port = 3000
 // This line is necessary to parse the request body
 app.use(express.json())
+
+app.use(cors())
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
