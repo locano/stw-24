@@ -1,0 +1,4 @@
+
+sudo docker build - < Dockerfile -t "stw_blog"
+
+docker run --name stw_blog_start -d -p 3306:3306 stw_blog
