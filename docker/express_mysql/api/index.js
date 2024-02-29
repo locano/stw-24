@@ -7,6 +7,7 @@ const port = 3000
 // This line is necessary to parse the request body
 app.use(express.json())
 
+console.log('enable Cors');
 app.use(cors())
 
 app.get('/', (req, res) => {
