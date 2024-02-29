@@ -1,0 +1,29 @@
+version: '1'
+name: chat-app
+services:
+ mysql:
+    build: ./mysql
+    ports:
+      - "33068:3306"
+    expose:
+    - "3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_USER: chat_user
+      MYSQL_PASSWORD: chat_password
+      MYSQL_DATABASE: chat_db
+    networks:
+      - my-network
+ api:
+    build: ./api
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"
+    depends_on:
+      - mysql
+    networks:
+    - my-network
+
+networks:
+  my-network:

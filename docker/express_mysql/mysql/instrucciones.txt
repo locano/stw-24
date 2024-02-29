@@ -1,0 +1,5 @@
+
+sudo docker build - < Dockerfile -t "my-mysql-chat"
+
+sudo docker build -t my-mysql-chat .
+docker run --name stw_mysql_start -d -p 3306:3306 my-mysql-chat

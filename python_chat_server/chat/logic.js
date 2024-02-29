@@ -15,7 +15,7 @@ const button = document.getElementById('send-message');
 
 // Define the async function to fetch messages
 
-const server_url = 'http://0.0.0.0:3000'
+const server_url = 'http://uwu-guate.site:3000'
 
 async function fetchMessages() {
     // Clear the list before adding new messages
