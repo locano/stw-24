@@ -1,0 +1,3 @@
+docker build -t mysql_blog .
+
+docker run --name mysql_container -d -p 33068:3306 mysql_blog
