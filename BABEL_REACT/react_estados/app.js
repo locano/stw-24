@@ -1,6 +1,5 @@
-
 ReactDOM.render(
-    <div>
-    </div>,
+    // COMPONENTE BANNER
+   <Blog/>,
     document.getElementById('master')
 );
