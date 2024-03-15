@@ -2,7 +2,7 @@
 FROM mysql:latest
 
 #Set environment variables for MySQL
-ENV MYSQL_DATABASE=blog_db
+ENV MYSQL_DATABASE=rsa_db
 ENV MYSQL_ROOT_PASSWORD=root_password
 
 # User and password for mysql

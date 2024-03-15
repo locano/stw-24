@@ -2,3 +2,5 @@
 chat.db
 ./node_modules
 .DS_Store
+
+BABEL_REACT/babel/node_modules/

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple React Website with Babel</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- React CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.development.js"></script>
+
+    <!-- Babel CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <script type="text/babel">
+        // Componente de ejemplo
+        function MiPrimerComponente() {
+            // retornar el elmento html que yo necesite
+            return (
+                <div>
+                    <h1>Hola, Mundo!</h1>
+                    <p>Este es un sitio web simple construido con React y Babel.</p>
+                </div>
+            );
+        }
+
+        // REACTDOM => VIRTUALDOM 
+        // render => renderiza el compone o componentes que yo necesite
+        // Renderizar el componente en el DOM
+        ReactDOM.render(
+            <MiPrimerComponente />,
+            document.getElementById('root')
+        );
+    </script>
+</body>
+</html>
