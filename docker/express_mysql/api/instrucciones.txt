@@ -1,2 +1,0 @@
-sudo docker build -t my-api-chat .
-docker run --name stw_api_start -d -p 3000:3000 my-api-chat

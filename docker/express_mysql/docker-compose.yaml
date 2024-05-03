@@ -1,5 +1,5 @@
 version: '1'
-name: chat-app
+name: blog-app
 services:
   mysql:
     build: ./mysql
@@ -7,9 +7,9 @@ services:
       - "33068:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_USER: chat_user
-      MYSQL_PASSWORD: chat_password
-      MYSQL_DATABASE: chat_db
+      MYSQL_USER: blog_user
+      MYSQL_PASSWORD: blog_password
+      MYSQL_DATABASE: blog_db
     volumes:
         - "mysql-data:/var/lib/mysql"
   api:
